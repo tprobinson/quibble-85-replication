@@ -1,0 +1,52 @@
+{
+  "ignorePatterns": [
+    "**/*.d.ts",
+    "**/*.js"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": [
+      "**/tsconfig.json"
+    ]
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "standard-with-typescript"
+  ],
+  "rules": {
+    "import/order": ["warn"],
+    "@typescript-eslint/keyword-spacing": ["off"],
+    "keyword-spacing": ["error", {
+      "before": true,
+      "after": true,
+      "overrides": {
+        "if": {
+          "after": false
+        },
+        "for": {
+          "after": false
+        },
+        "while": {
+          "after": false
+        },
+        "switch": {
+          "after": false
+        }
+      }
+    }],
+    "space-in-parens": ["off"],
+    "space-before-function-paren": ["off"],
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore"
+    }]
+  }
+}

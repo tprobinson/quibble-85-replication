@@ -1,0 +1,41 @@
+{
+  "include": [
+    "**/*.ts",
+    "**/*.cjs",
+    "**/*.mjs",
+  ],
+  "exclude": [
+    "**/node_modules",
+  ],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": false,
+    "alwaysStrict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "isolatedModules": true,
+    "lib": [
+      "ESNext",
+      "DOM", // a somewhat kludgy way of using the Native Fetch API, since there aren't types for it yet
+    ],
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "stripInternal": true,
+    "incremental": true,
+  },
+}

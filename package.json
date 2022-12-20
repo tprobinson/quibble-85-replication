@@ -1,0 +1,30 @@
+{
+  "name": "quibble-85-replication",
+  "type": "module",
+  "packageManager": "yarn@3.2.1",
+  "scripts": {
+    "test": "echo 'Running test suites...' && yarn node:esm --loader=testdouble $(yarn bin mocha) --config .mocharc.cjs test/**.ts",
+    "node:esm": "yarn node --no-warnings --experimental-specifier-resolution=node --experimental-vm-modules --experimental-fetch --loader ts-node/esm"
+  },
+  "dependencies": {
+    "@commercetools/sdk-client-v2": "1.4.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.11.16",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.17.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-with-typescript": "latest",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "mocha": "^10.2.0",
+    "testdouble": "^3.16.8",
+    "ts-node": "^10.9.1",
+    "typescript": "4.7.4"
+  }
+}
